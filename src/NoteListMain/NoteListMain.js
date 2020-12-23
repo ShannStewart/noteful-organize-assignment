@@ -38,3 +38,7 @@ export default function NoteListMain(props) {
 NoteListMain.defaultProps = {
   notes: [],
 }
+
+NoteListNav.prototype = {
+  notes: PropTypes.array
+};

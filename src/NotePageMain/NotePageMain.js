@@ -24,3 +24,7 @@ NotePageMain.defaultProps = {
     content: '',
   }
 }
+
+NoteListNav.prototype = {
+  note: PropTypes.object
+};

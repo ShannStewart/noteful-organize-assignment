@@ -52,7 +52,7 @@ class App extends Component {
         var newNoteID = this.state.noteID + 1;
         this.setState({noteID: newNoteID});
 
-        console.log("new note: " + JSON.stringify(newNote));
+        //console.log("new note: " + JSON.stringify(newNote));
 
         var newNoteList = this.state.notes.concat(newNote);
         this.setState({ notes: newNoteList});
