@@ -5,6 +5,8 @@ import Note from '../Note/Note'
 import CircleButton from '../CircleButton/CircleButton'
 import './NoteListMain.css'
 
+import PropTypes from 'prop-types';
+
 export default function NoteListMain(props) {
   return (
     <section className='NoteListMain'>
@@ -39,6 +41,6 @@ NoteListMain.defaultProps = {
   notes: [],
 }
 
-NoteListNav.prototype = {
+NoteListMain.prototype = {
   notes: PropTypes.array
 };
