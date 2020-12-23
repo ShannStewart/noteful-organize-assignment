@@ -11,6 +11,7 @@ import './App.css';
 
 import AddFolder from '../AddFolder/AddFolder';
 import AddNote from '../AddNote/AddNote';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 class App extends Component {
     state = {
@@ -122,18 +123,22 @@ class App extends Component {
                         return <NotePageMain {...routeProps} note={note} />;
                     }}
                 />
+                <ErrorBoundary>
                 <Route
                     path="/add-folder"
                     render={routeProps => {
                         return <AddFolder addNewFolder={this.folderSubmit}/> 
                     }}
                 />
+                    </ErrorBoundary>
+                <ErrorBoundary>
                  <Route
                     path="/add-note"
                     render={routeProps => {
                         return <AddNote addNewNote={this.noteSubmit}/> 
                     }}
                 />
+                    </ErrorBoundary>
             </>
         );
     }
